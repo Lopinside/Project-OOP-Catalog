@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CARSALE</title>
+    
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+        <ul>
+            <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
+            <li><a href="#products" onclick="navigateTo('products')">Produk Kami</a></li>
+            <li><a href="#about" onclick="navigateTo('about')">Tentang Kami</a></li>
+        </ul>
+        <div class="logo">
+            <h1>CarSale</h1>
+        </div>
+    </div>
+     <div id="home" class="content active" style= "display: flex; flex-direction: row; align-items: center; margin:auto">
+            <img src="LOGO.png" alt="" style="width: 200px; height: auto;">
+
+            Selamat datang para pembeli yang kaya raya,  kami sudah menunggu kehadiaran dompet-dompet anda silahkan memilih dalam store kami dengan menjual pilihan pilihan mobil yang sangat terbatas variantnya. <br>Jangan ragu jangan bimbang untuk menghabiskan uang anda disini!
+            <br>Tunggu apalgi jangan lewatkan moment berharga dan langka ini. </p>
+        </div>
+
+        <div id="products" class="content">
+            <h2>Produk kami</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="nissa-removebg-preview.png" alt="Product 1">
+                    <h3>Cars 1</h3>
+                    <p>$50.00</p>
+                    <button class="add-to-cart" data-id="1">Add to Cart</button>
+                    <button class="detail" onclick="toggleDetailPopup('popup1')">Detail</button>
+                </div>
+                <div class="product">
+                    <img src="nissa-removebg-preview.png" alt="Product 2">
+                    <h3>Cars 2</h3>
+                    <p>$60.00</p>
+                    <button class="add-to-cart" data-id="2">Add to Cart</button>
+                    <button class="detail" onclick="toggleDetailPopup('popup2')">Detail</button>
+                </div>
+                <div class="product">
+                    <img src="Honda-removebg-preview.png" alt="Product 3">
+                    <h3>Cars 3</h3>
+                    <p>$70.00</p>
+                    <button class="add-to-cart" data-id="3">Add to Cart</button>
+                    <button class="detail" onclick="toggleDetailPopup('popup3')">Detail</button>
+                </div>
+                <div class="product">
+                    <img src="MAZDA-removebg-preview.png" alt="Product 4">
+                    <h3>Cars 4</h3>
+                    <p>$60.00</p>
+                    <button class="add-to-cart" data-id="4">Add to Cart</button>
+                    <button class="detail" onclick="toggleDetailPopup('popup4')">Detail</button>
+                </div>
+                <div class="product">
+                    <img src="nissa-removebg-preview.png" alt="Product 5">
+                    <h3>Cars 5</h3>
+                    <p>$60.00</p>
+                    <button class="add-to-cart" data-id="5">Add to Cart</button>
+                    <button class="detail" onclick="toggleDetailPopup('popup5')">Detail</button>
+                </div>
+                <div class="cart">
+                    <h2>Total Pembelian</h2>
+                    <ul class="cart-items" id="cart-items"></ul>
+                    <p>Total: $<span id="cart-total">0.00</span></p>
+                    <button id="clear-cart">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="content">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah sepasang pembisnis mobil dengan menjual mobil mobil langka dengan kualitas terbaik tanpa batas tanpa minus , melebihi dari toko penjualaan mobil lainnya </p>
+        </div>
+
+        <div class="popup" id="popup1">
+            <div class="popup-content">
+                <img src="mobil1.jpg" alt="Product 1">
+                <h3>Cars 1</h3>
+                <p><br>Mobil ini didesain oleh desainer handal dan profesional sehingga harga nya sangat fantastic dikarenakan sudah sering mendapatkan mendali gold dan penghargaan nobel<br>
+                    $50.00</p>
+                <button onclick="toggleDetailPopup('popup1')">Close</button>
+            </div>
+        </div>
+
+        <div class="popup" id="popup2">
+            <div class="popup-content">
+                <img src="mobil2.jpg" alt="Product 2">
+                <h3>Cars 2</h3>
+                <p><br>Mobil ini didesain oleh desainer handal dan profesional sehingga harga nya sangat fantastic dikarenakan sudah sering mendapatkan mendali gold dan penghargaan nobel<br>
+                    $60.00</p>
+                <button onclick="toggleDetailPopup('popup2')">Close</button>
+            </div>
+        </div>
+
+        <div class="popup" id="popup3">
+            <div class="popup-content">
+                <img src="mobil3.jpg" alt="Product 3">
+                <h3>Cars 3</h3>
+                <p><br>Mobil ini didesain oleh desainer handal dan profesional sehingga harga nya sangat fantastic dikarenakan sudah sering mendapatkan mendali gold dan penghargaan nobel<br>
+                    $60.00</p>
+                <button onclick="toggleDetailPopup('popup3')">Close</button>
+            </div>
+        </div>
+
+        <div class="popup" id="popup4">
+            <div class="popup-content">
+                <img src="mobil4.jpg" alt="Product 4">
+                <h3>Cars 4</h3>
+                <p><br>Mobil ini didesain oleh desainer handal dan profesional sehingga harga nya sangat fantastic dikarenakan sudah sering mendapatkan mendali gold dan penghargaan nobel<br>
+                    $60.00</p>
+                <button onclick="toggleDetailPopup('popup4')">Close</button>
+            </div>
+        </div>
+
+        <div class="popup" id="popup5">
+            <div class="popup-content">
+                <img src="mobil5.jpg" alt="Product 5">
+                <h3>Cars 5</h3>
+                <p>
+                <br>Mobil ini didesain oleh desainer handal dan profesional sehingga harga nya sangat fantastic dikarenakan sudah sering mendapatkan mendali gold dan penghargaan nobel<br></p>
+                <p>$60.00</p>
+                <button onclick="toggleDetailPopup('popup5')">Close</button>
+            </div>
+        </div>
+        
+
+        
+
+    <script src="main.js"></script>
+</body>
+</html>
